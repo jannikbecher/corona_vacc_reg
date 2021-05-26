@@ -1,29 +1,43 @@
 <section class="phx-hero">
-  <h1><%= gettext "Coronaimpfung Anmeldung" %></h1>
-  <p>Bitte fuellen Sie die Informationen aus.</p>
+  <h1><%= gettext "Anmeldung zur Corona-Impfung" %></h1>
+  <p>Mit dem Ausfüllen des Formulars, melden Sie sich zum nächstmöglichen Impftermin an.</p>
 
   <%= f = form_for @changeset, "#", [phx_change: :validate, phx_submit: :submit] %>
     <%= if @changeset.action do %>
       <div class="alert alert-danger">
-        <p><%= gettext "Please fill all fields." %></p>
+        <p><%= gettext "Bitte alle Felder ausfüllen." %></p>
       </div>
     <% end %>
 
-    <%= label f, :first_name %>
+    <%= label f, "Vorname" %>
     <%= text_input f, :first_name %>
     <%= error_tag f, :first_name %>
 
-    <%= label f, :last_name %>
+    <%= label f, "Nachname" %>
     <%= text_input f, :last_name %>
     <%= error_tag f, :last_name %>
 
-    <%= label f, :doctor %>
+    <%= label f, "Hausarzt" %>
     <%= text_input f, :doctor %>
     <%= error_tag f, :doctor %>
 
-    <%= label f, :birthdate %>
-    <%= date_select f, :birthdate, year: [options: 1900..2020], builder: fn b -> %>
-      <%= b.(:day, []) %> . <%= b.(:month, []) %> . <%= b.(:year, []) %>
+    <%= label f, "Geburtsdatum" %>
+    <%= date_select f, :birthdate, year: [options: 1900..2020], month: [
+      options: [
+        {"Januar", "1"},
+        {"Februar", "2"},
+        {"März", "3"},
+        {"April", "4"},
+        {"Mai", "5"},
+        {"Juni", "6"},
+        {"Juli", "7"},
+        {"August", "8"},
+        {"September", "9"},
+        {"Oktober", "10"},
+        {"November", "11"},
+        {"Dezember", "12"},
+      ]], builder: fn b -> %>
+      <%= b.(:day, []) %> <%= b.(:month, []) %> <%= b.(:year, []) %>
     <% end %>
     <%= error_tag f, :birthdate %>
 
@@ -31,10 +45,10 @@
     <%= email_input f, :email %>
     <%= error_tag f, :email %>
 
-    <%= label f, :mobile %>
+    <%= label f, "Mobiltelefon" %>
     <%= text_input f, :mobile %>
     <%= error_tag f, :mobile %>
 
-    <%= submit "Register", phx_disable_with: "Saving...", disabled: !@changeset.valid? %>
+    <%= submit "Anmelden", phx_disable_with: "Anmelden...", disabled: !@changeset.valid? %>
   </form>
 </section>

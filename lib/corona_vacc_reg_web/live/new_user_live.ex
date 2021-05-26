@@ -23,8 +23,8 @@ defmodule CoronaVaccRegWeb.NewUserLive do
   def handle_event("submit", %{"user" => params}, socket) do
     case Appointment.create_user(params) do
       {:ok, user} ->
-        # send email
-        {:noreply, redirect(socket, to: Routes.live_path(socket, CoronaVaccRegWeb.PageLive, user: user))}
+        #TODO: send email
+        {:noreply, redirect(socket, to: Routes.live_path(socket, CoronaVaccRegWeb.PageLive, user: params))}
       {:error, %Ecto.Changeset{} = cset} ->
         {:noreply, assign(socket, changeset: cset)}
     end
