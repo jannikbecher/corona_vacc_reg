@@ -35,7 +35,7 @@ config :corona_vacc_reg, CoronaVaccRegWeb.Endpoint,
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start each relevant endpoint:
 #
-#     config :corona_vacc_reg, CoronaVaccRegWeb.Endpoint, server: true
+config :corona_vacc_reg, CoronaVaccRegWeb.Endpoint, server: true
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.
