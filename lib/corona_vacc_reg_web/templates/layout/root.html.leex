@@ -12,7 +12,9 @@
   <body>
     <header>
       <section class="container">
-        <h1>Waester Praxis Warstein</h1>
+        <a href="https://waesterpraxis.de/" class="phx-logo">
+          <img src="<%= Routes.static_path(@conn, "/images/logo.jpg") %>" alt="Waesterpraxis Logo"/>
+        </a>
       </section>
     </header>
     <%= @inner_content %>

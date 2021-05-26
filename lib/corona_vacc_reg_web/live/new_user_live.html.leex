@@ -1,6 +1,6 @@
 <section class="phx-hero">
-  <h1><%= gettext "Anmeldung zur Corona-Impfung" %></h1>
-  <p>Mit dem Ausfüllen des Formulars, melden Sie sich zum nächstmöglichen Impftermin an.</p>
+  <h1><%= gettext "Anmeldung zur Coronaimpfung mit BioNTech" %></h1>
+  <p>Mit dem Ausfüllen des Formulars melden Sie sich zum nächstmöglichen Impftermin an.</p>
 
   <%= f = form_for @changeset, "#", [phx_change: :validate, phx_submit: :submit] %>
     <%= if @changeset.action do %>

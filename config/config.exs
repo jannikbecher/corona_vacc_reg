@@ -26,6 +26,19 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Config for bamboo mailer
+config :corona_vacc_reg, CoronaVaccReg.Mailer,
+  adapter: Bamboo.SMTPAdapter,
+  server: "ciffreo.uberspace.de",
+  hostname: "becher.uber.space",
+  port: 587,
+  username: "test@becher.uber.space",
+  password: "testtest",
+  tls: :always,
+  retries: 1,
+  no_mx_lookups: false,
+  auth: :if_available
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
