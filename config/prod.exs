@@ -10,7 +10,7 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :corona_vacc_reg, CoronaVaccRegWeb.Endpoint,
-  url: [host: "example.com", port: 80],
+  url: [host: "becher.uber.space", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
