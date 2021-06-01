@@ -12,7 +12,7 @@ defmodule CoronaVaccReg.Email do
   def send_confirmation_email(receiver) do
     new_email(
       to: receiver,
-      from: "Wästerpraxis <kontakt@waesterpraxis.de>",
+      from: "kontakt@waesterpraxis.de",
       subject: "Anmeldung Coronaimpfung",
       html_body: @confirmation_email_html,
       text_body: "Vielen Dank für Ihre Anmeldung!"
