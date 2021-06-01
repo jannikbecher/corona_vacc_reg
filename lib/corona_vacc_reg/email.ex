@@ -19,7 +19,7 @@ defmodule CoronaVaccReg.Email do
       <p>
         Name: #{user["last_name"]}<br>
         Vorname: #{user["first_name"]}<br>
-        Geburtsdatum: #{user["birthdate"].day}.#{user["birthdate"].month}.#{user["birthdate"].year}<br>
+        Geburtsdatum: #{user["birthdate"]["day"]}.#{user["birthdate"]["month"]}.#{user["birthdate"]["year"]}<br>
         Mobiltelefon: #{user["mobile"]}<br>
       </p>
 
