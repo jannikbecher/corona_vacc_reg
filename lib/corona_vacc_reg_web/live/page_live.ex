@@ -3,7 +3,6 @@ defmodule CoronaVaccRegWeb.PageLive do
 
   @impl true
   def mount(params, _session, socket) do
-    IO.inspect(params)
     {:ok, assign(socket, params: params)}
   end
 end
