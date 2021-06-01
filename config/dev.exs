@@ -74,3 +74,6 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :corona_vacc_reg,
+  csv_endpoint: System.fetch_env!("CSV_ENDPOINT")

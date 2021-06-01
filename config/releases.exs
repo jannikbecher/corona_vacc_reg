@@ -12,3 +12,6 @@ config :corona_vacc_reg, CoronaVaccReg.Mailer,
   retries: 1,
   no_mx_lookups: false,
   auth: :always
+
+config :corona_vacc_reg,
+  csv_endpoint: System.fetch_env!("CSV_ENDPOINT")

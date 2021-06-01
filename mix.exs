@@ -48,7 +48,8 @@ defmodule CoronaVaccReg.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:bamboo, "~> 2.1.0"},
-      {:bamboo_smtp, "~> 4.0.1"}
+      {:bamboo_smtp, "~> 4.0.1"},
+      {:csv, "~> 1.4.0"}
     ]
   end
 

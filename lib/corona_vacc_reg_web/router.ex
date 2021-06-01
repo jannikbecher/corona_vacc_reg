@@ -17,9 +17,10 @@ defmodule CoronaVaccRegWeb.Router do
   scope "/", CoronaVaccRegWeb do
     pipe_through :browser
 
-    resources "/users", UserController
     live "/", NewUserLive, :index
     live "/confirm", PageLive
+
+    get "/csv/" <> Application.fetch_env!(:corona_vacc_reg, :csv_endpoint), CsvExportController, :export
   end
 
   # Other scopes may use custom stacks.
