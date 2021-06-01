@@ -15,7 +15,7 @@ defmodule CoronaVaccReg.Email do
   def generate_html(user) do
     """
     <section>
-      <h4>Vielen Dank für Ihre Anmeldung zur Coronaimpfung mit BioNTech in unserer Praxis.</h4><br><br>
+      <h3>Vielen Dank für Ihre Anmeldung zur Coronaimpfung mit BioNTech in unserer Praxis.</h3>
       <p>
         Name: #{user["last_name"]}<br>
         Vorname: #{user["first_name"]}<br>

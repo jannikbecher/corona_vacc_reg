@@ -24,7 +24,7 @@ defmodule CoronaVaccRegWeb.NewUserLive do
     case Appointment.create_user(params) do
       {:ok, user} ->
         CoronaVaccReg.Email.send_confirmation_email(params)
-        {:noreply, redirect(socket, to: Routes.live_path(socket, CoronaVaccRegWeb.PageLive, user: params))}
+        {:noreply, redirect(socket, to: Routes.live_path(socket, CoronaVaccRegWeb.PageLive, params))}
       {:error, %Ecto.Changeset{} = cset} ->
         {:noreply, assign(socket, changeset: cset)}
     end
