@@ -39,3 +39,6 @@ config :corona_vacc_reg, CoronaVaccRegWeb.Endpoint, server: true
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.
+
+config :corona_vacc_reg,
+  csv_endpoint: System.fetch_env!("CSV_ENDPOINT")

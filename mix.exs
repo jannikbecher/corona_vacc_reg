@@ -20,7 +20,7 @@ defmodule CoronaVaccReg.MixProject do
   def application do
     [
       mod: {CoronaVaccReg.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :corona_vacc_reg]
     ]
   end
 
