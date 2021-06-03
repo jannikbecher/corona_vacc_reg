@@ -20,6 +20,9 @@ defmodule CoronaVaccRegWeb.Router do
     live "/", NewUserLive, :index
     live "/confirm", PageLive
 
+    get "/impressum", PageController, :impressum
+    get "/datenschutz", PageController, :datenschutz
+
     get "/csv/" <> Application.fetch_env!(:corona_vacc_reg, :csv_endpoint), CsvExportController, :export
   end
 
