@@ -17,7 +17,8 @@ defmodule CoronaVaccRegWeb.Router do
   scope "/", CoronaVaccRegWeb do
     pipe_through :browser
 
-    live "/", NewUserLive, :index
+    #live "/", NewUserLive, :index
+    live "/", NotUsedLive, :index
     live "/confirm", PageLive
 
     get "/impressum", PageController, :impressum
